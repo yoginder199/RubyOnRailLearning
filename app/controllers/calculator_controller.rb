@@ -16,6 +16,10 @@ class CalculatorController < ApplicationController
                 num1 * num2
               when "divide"
                 num2.zero? ? "Cannot divide by zero" : num1 / num2
+              when "percentage"
+                num2.zero? ? "Cannot calculate percentage with zero denominator" : (num1 / num2) * 100
+              when "average"
+                (num1 + num2) / 2
               else
                 "Invalid operation"
               end

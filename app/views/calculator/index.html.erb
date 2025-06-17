@@ -19,7 +19,8 @@
 
         <div class="mb-3">
           <label class="form-label">Select Operator</label>
-          <%= select_tag :operation, options_for_select([["Add", "add"], ["Subtract", "subtract"], ["Multiply", "multiply"], ["Divide", "divide"]], params[:operation]), class: "form-select", id: "operation" %>
+          <%= select_tag :operation, options_for_select([["Add", "add"], ["Subtract", "subtract"], ["Multiply", "multiply"], ["Divide", "divide"], ["Percentage (no1 of no2)", "percentage"],
+    ["Average", "average"]], params[:operation]), class: "form-select", id: "operation" %>
         </div>
 
         <div class="d-flex justify-content-between mt-3">

@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
+  get "products/index"
+  get "products/new"
+  get "products/create"
   root "calculator#index"
   post "calculate", to: "calculator#calculate"
   get "calculator/index"
   get "calculator/calculate"
+  # root "products#index"
+  resources :products, only: [:index, :new, :create]
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
